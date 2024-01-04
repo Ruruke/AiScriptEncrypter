@@ -18,7 +18,7 @@ class Program
         string filenameWithoutExtension = Path.GetFileNameWithoutExtension(originalPath);
         string extension = Path.GetExtension(originalPath);
         string outputPath = Path.Combine(directory, $"{filenameWithoutExtension}.min{extension}");
-        String code = FileManager.ReadFile(@"C:\Users\ruru\Desktop\misskey-play\country-quiz\main.aiscript");
+        String code = FileManager.ReadFile(originalPath);
 
         string res = AiScriptParser.aiscript(code);
         ArrayList arrayList = new ArrayList();
